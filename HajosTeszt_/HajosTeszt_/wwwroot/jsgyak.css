@@ -1,0 +1,23 @@
+#pascal {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sor {
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.elem {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    display: inline-block;
+}
