@@ -24,7 +24,6 @@ function kérdésMegjelenítés(k){
        document.getElementById("válasz3").innerText = kérdések[k].answer3;
        if(kérdések[k].image===""){
         document.getElementById("tesztKep").style.display = "none";
-        console.log("Buuziben");
        }else{
         document.getElementById("tesztKep").style.display = "inline";
        document.getElementById("tesztKep").src = "https://szoft1.comeback.hu/hajo/"+kérdések[k].image;
