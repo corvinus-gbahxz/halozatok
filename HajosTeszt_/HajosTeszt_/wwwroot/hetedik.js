@@ -2,11 +2,11 @@ var kérdések;
 var jelenlegiKérdés;
 var clickable = true;
 
-window.onload = function letöltés(){
-    fetch("questions.json")
-            .then(r => r.json())
-            .then(d => letöltésBefejeződött(d));
-}
+window.onload = function kérdésBetöltés(id) {
+    fetch(`/questions/${id}`)
+        .then(válaszfeldolgozás)
+        .then(kérdésMegjelenítés);
+}       
 
 
 function letöltésBefejeződött(d) {
