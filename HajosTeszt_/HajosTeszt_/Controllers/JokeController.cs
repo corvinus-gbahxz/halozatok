@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using HajosTeszt_.JokeModels;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +18,11 @@ namespace HajosTeszt_.Controllers
 
         // GET: api/<JokeController>
         [HttpGet]
-        public ActionResult Get()
+        public IEnumerable<Joke> Get()
         {
-            return new JsonResult(Jokes);
+            // return new JsonResult(Jokes);
+            FunnyDatabaseContext context = new FunnyDatabaseContext();
+            return( IEnumerable < Joke > )context.Jokes.ToList();
         }
 
         // GET api/<JokeController>/5
